@@ -1,0 +1,32 @@
+<p>vehicle-list works!</p>
+<!-- {{list | json}} -->
+
+<table border="2">
+    <thead>
+      <tr>
+        <th>Vehicle ID</th>
+        <th>Model No.</th>
+        <th>Company</th>
+        <th>Description</th>
+        <th>Driver ID</th>
+        <th>Driver Name</th>
+        <th>Driver Contact</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let vehicle of list">
+        <td>{{ vehicle.vehicleid }}</td>
+        <td>{{ vehicle.modelno }}</td>
+        <td>{{ vehicle.company }}</td>
+        <td>{{ vehicle.description }}</td>
+        <td>{{ vehicle.driver.driverid }}</td>
+        <td>{{ vehicle.driver.name }}</td>
+        <td>{{ vehicle.driver.contactno }}</td>
+        <td><button (click)="deleteVehicle(vehicle.vehicleid)" >Delete</button></td>
+      </tr>
+      <tr *ngIf="!list || list.length == 0">
+        <td colspan="7">No Vehicles to display</td>
+      </tr>
+    </tbody>
+  </table>

@@ -1,0 +1,36 @@
+<p>user works!</p>
+<div>
+    <h2>User name : {{username}}</h2>
+    <p>One-Way Data Binding - String Interpolation</p>
+</div>
+
+<div>
+    <h2>
+        {{"String Interpolation"}} Username : 
+        <input type="text" name="username" value={{username}} />
+    </h2>
+</div>
+<div>
+    <h2>
+        [Property Binding] Username : 
+        <input type="text" name="username" [value]="username" />
+    </h2>
+</div>
+<div>
+    <h2>
+        (Event Binding) Username : 
+        <input type="button" [value]=caption (click)="changeUserName('Amit')" />
+    </h2>
+</div>
+<div>
+    <h2>
+        (Event Binding) Username : 
+        <input type="button" value="PRESS" [disabled]=flag />
+    </h2>
+</div>
+<div>
+    <h2>
+        (Two Way Data Binding) Username : 
+        <input type="text" name="username" [(ngModel)]="username" />
+    </h2>
+</div>

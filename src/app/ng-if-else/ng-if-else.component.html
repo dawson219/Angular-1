@@ -1,0 +1,47 @@
+<p>ng-if-example works!</p>
+<div>
+    <input type="radio" name="rb" (click)="ChangeData(true)" checked> Valid
+    <input type="radio" name="rb" (click)="ChangeData(false)"> Invalid
+</div>
+
+<p *ngIf="5>2">
+    <b>Hello</b>
+</p> 
+
+ <div *ngIf="isValid">
+    <b>The Data is valid.</b>
+</div>
+
+<div *ngIf="!isValid">
+    <b>The Data is invalid.</b>
+</div> 
+
+ <div *ngIf="isValid else abc">
+    <b>FIRST BLOCK.</b>
+</div>
+
+<ng-template #abc>
+    <div>
+        <b>SECOND BLOCK</b>
+    </div>
+</ng-template> 
+
+
+
+
+
+
+<div *ngIf="isValid then ablock else bblock">
+ </div>
+
+<ng-template #ablock>
+    <div>
+        <b>The is Then Block A</b>
+    </div>
+</ng-template>
+
+<ng-template #bblock>
+    <div>
+        <b>The is Else Block B</b>
+    </div>
+</ng-template> 

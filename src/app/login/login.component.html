@@ -1,0 +1,11 @@
+<p>login works!</p>
+
+<div *ngIf="5 < 10" >
+    Enter your Name: <input type="text" [(ngModel)]="username" name="username" />
+</div>
+
+<p *ngIf="!valid()">
+    This is Para
+</p>
+
+<button *ngIf="username != ''">Login</button>
